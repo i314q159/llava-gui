@@ -9,11 +9,11 @@ def get_all_file_paths(folder_path):
     return file_paths
 
 
-def get_response(url, picture_path):
+def get_response(url, picture_path):     
     data = {
         "model": "llava",
         "prompt": "图片里面是什么?",
-        "images": [picture_path],
+        "images": picture_path,
     }
 
     response = requests.post(url, json=data)
